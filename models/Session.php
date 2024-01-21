@@ -5,7 +5,7 @@ class Session
 
     private $id, $ip, $data_login, $user_id;
 
-    function __getId()
+    function getId()
     {
         return $this->id;
     }
@@ -35,7 +35,7 @@ class Session
 
     public function Delete()
     {
-        $id = self::__getId();
+        $id = self::getId();
         $pdo = self::connectToDatabase();
         $stmt = $pdo->prepare("delete from ecommerce.sessions where id=:id");
         $stmt->bindParam(":id", $id);
