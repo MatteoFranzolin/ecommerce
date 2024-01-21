@@ -2,7 +2,10 @@
 require '../../models/User.php';
 
 session_start();
-$user = $_SESSION['current_user'];
+if (!isset($_SESSION['current_user']) || $_SESSION['current_user']->getRoleId() == 1) {
+    header("HTTP/1.1 401 Unauthorized");
+    exit("Not Authorized");
+}
 ?>
 
 <html>
