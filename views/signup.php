@@ -2,7 +2,6 @@
 ?>
 
 <html>
-
 <head>
     <title>Sign up</title>
     <link rel="stylesheet" href="./styles/authentication_styles.css">
@@ -19,7 +18,5 @@
         <p>Already have an account? <a href="./login.php">Log in</a></p>
     </form>
 </div>
-
 </body>
-
 </html>

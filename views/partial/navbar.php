@@ -28,7 +28,6 @@
     } else { ?>
         <a class="navbut" href="../login.php">Login</a>
     <?php } ?>
-
 </div>
 </body>
 </html>

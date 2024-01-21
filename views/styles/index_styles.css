@@ -31,11 +31,12 @@ ul {
     list-style: none;
     padding: 50px;
 }
+
 li {
     display: inline-flex;
 }
 
-input{
+input {
     background-color: transparent;
     width: 80%;
     padding: 10px;
@@ -46,7 +47,7 @@ input{
     border-radius: 4px;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     background-color: transparent;
     padding: 10px;
     margin: 8px 8px 8px 8px;
@@ -56,21 +57,21 @@ button[type="submit"]{
 }
 
 input[type="submit"],
-button, a{
+button, a {
     background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
     color: #354152;
     cursor: pointer;
     transition: 0.5s ease;
 }
 
-.navbut{
+.navbut {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
 }
 
-.add_product{
+.add_product {
     margin: 25%;
     width: 25%;
     height: 25%;
@@ -81,7 +82,7 @@ button, a{
 }
 
 input[type="submit"]:hover,
-button:hover, a:hover{
+button:hover, a:hover {
     background-image: linear-gradient(160deg, #8ceabb 30%, #589b94 100%);
     transform: scale(1.01);
 }

@@ -38,7 +38,7 @@ input, button {
 }
 
 input[type="submit"],
-button{
+button {
     background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
     color: #354152;
     cursor: pointer;
@@ -46,17 +46,17 @@ button{
 }
 
 input[type="submit"]:hover,
-button:hover{
+button:hover {
     background-image: linear-gradient(160deg, #8ceabb 30%, #589b94 100%);
     transform: scale(1.02);
 }
 
 
-a{
+a {
     color: rgba(206, 213, 223, 0.5);
     transition: 0.5s ease;
 }
 
-a:hover{
+a:hover {
     color: #ced5df;
 }

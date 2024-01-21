@@ -1,6 +1,7 @@
 <?php
 include 'Product.php';
 include __DIR__ . '/../connessione/Database.php';
+
 class Cart
 {
     private $id, $user_id;
