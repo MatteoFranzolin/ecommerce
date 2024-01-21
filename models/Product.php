@@ -14,32 +14,32 @@ class Product
         $this->id = $id;
     }
 
-    function getBrand()
+    function getMarca()
     {
         return $this->marca;
     }
 
-    public function setBrand($marca): void
+    public function setMarca($marca): void
     {
         $this->marca = $marca;
     }
 
-    function getName()
+    function getNome()
     {
         return $this->nome;
     }
 
-    public function setName($nome): void
+    public function setNome($nome): void
     {
         $this->nome = $nome;
     }
 
-    function getPrice()
+    function getPrezzo()
     {
         return $this->prezzo;
     }
 
-    public function setPrice($prezzo): void
+    public function setPrezzo($prezzo): void
     {
         $this->prezzo = $prezzo;
     }

@@ -30,15 +30,15 @@ if (isset($_SESSION['current_user'])) {
                     <li>
                         <br>Marca:
                         <input type="text" name="marca" placeholder="Marca"
-                               value="<?php echo $product->getBrand(); ?>"
+                               value="<?php echo $product->getMarca(); ?>"
                                required>
                         <br>Nome:
                         <input type="text" name="nome" placeholder="Nome"
-                               value="<?php echo $product->getName(); ?>"
+                               value="<?php echo $product->getNome(); ?>"
                                required>
                         <br>Prezzo:
                         <input type="number" name="prezzo" placeholder="Prezzo"
-                               value="<?php echo $product->getPrice(); ?>" min="0" required step="0.01"></li>
+                               value="<?php echo $product->getPrezzo(); ?>" min="0" required step="0.01"></li>
                     <li>
                         <button type="submit" form="<?php echo $product->getId(); ?>"
                                 formaction="../../actions/edit_product.php">Modifica prodotto

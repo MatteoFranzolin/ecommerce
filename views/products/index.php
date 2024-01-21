@@ -30,9 +30,9 @@ if (isset($_SESSION['current_user'])) {
             <ul>
                 <li>
                     <?php
-                    echo "Marca: " . $product->getBrand() . "<br>";
-                    echo "Nome: " . $product->getName() . "<br>";
-                    echo "Prezzo: " . $product->getPrice() . "€<br>"; ?>
+                    echo "Marca: " . $product->getMarca() . "<br>";
+                    echo "Nome: " . $product->getNome() . "<br>";
+                    echo "Prezzo: " . $product->getPrezzo() . "€<br>"; ?>
                 </li>
                 <li>
                     <form action="../../actions/add_to_cart.php" method="POST">

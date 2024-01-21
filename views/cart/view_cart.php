@@ -32,14 +32,14 @@ $totale = 0;
         $product_id = $line->getProductId();
         $product = Product::FindById($product_id);
         $quantita = $line->getQuantita();
-        $prezzo = $product->getPrice();
+        $prezzo = $product->getPrezzo();
         $prezzo_totale = $quantita * $prezzo; ?>
 
         <div class="product-item">
             <ul>
                 <li>
-                    <?php echo "Brand: " . $product->getBrand() . "<br>";
-                    echo "Nome: " . $product->getName() . "<br>";
+                    <?php echo "Marca: " . $product->getMarca() . "<br>";
+                    echo "Nome: " . $product->getNome() . "<br>";
                     echo "Prezzo: " . $prezzo . "€" . "<br>";
                     echo "Quantità: " . $quantita . "<br>";
                     echo "Prezzo totale: " . $prezzo_totale . "€" . "<br>";
