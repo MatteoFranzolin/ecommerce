@@ -3,15 +3,12 @@ require '../../connessione/Database.php';
 require '../../models/User.php';
 require '../../models/Product.php';
 
-if (isset($_SESSION['current_user'])) {
-    $user = $_SESSION['current_user'];
-    $user_id = $user->getId();
-} else {
+session_start();
+if (!isset($_SESSION['current_user']) || $_SESSION['current_user']->getRoleId() == 1) {
     header("HTTP/1.1 401 Unauthorized");
     exit("Not Authorized");
 }
 ?>
-
 <html>
 <head>
     <title>Admin</title>
