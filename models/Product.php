@@ -109,8 +109,8 @@ class Product
     public static function FetchAll()
     {
         $pdo = self::connectToDatabase();
-        $sql = "select * from ecommerce.products";
-        return $pdo->query($sql)->fetchAll(PDO::FETCH_CLASS, 'Product');
+        $stmt = "select * from ecommerce.products";
+        return $pdo->query($stmt)->fetchAll(PDO::FETCH_CLASS, 'Product');
     }
 
     public function edit($params)

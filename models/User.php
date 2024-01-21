@@ -26,7 +26,7 @@ class User
         $stmt->bindParam(":email", $params['email']);
         $stmt->bindParam(":password", $params['password']);
         if (!$stmt->execute()) {
-            return false;
+            throw new Exception("User non creato");
         }
         return self::getLastInsert();
     }
@@ -58,6 +58,17 @@ class User
         $pdo = self::connectToDatabase();
         $stmt = $pdo->prepare("select id, email, role_id from ecommerce.users where id = :id limit 1");
         $stmt->bindParam(":id", $id);
+        if (!$stmt->execute()) {
+            return false;
+        }
+        return $stmt->fetchObject('User');
+    }
+
+    public static function FindByEmail($email)
+    {
+        $pdo = self::connectToDatabase();
+        $stmt = $pdo->prepare("select id, email, role_id from ecommerce.users where email = :email limit 1");
+        $stmt->bindParam(":email", $email);
         if (!$stmt->execute()) {
             return false;
         }

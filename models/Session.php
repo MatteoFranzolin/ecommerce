@@ -18,7 +18,7 @@ class Session
         $stmt->bindParam(":data_login", $params['data_login']);
         $stmt->bindParam(":user_id", $params['user_id']);
         if (!$stmt->execute()) {
-            throw new Exception("Errore, record non creato");
+            return false;
         }
         return self::getLastInsert();
     }
