@@ -5,7 +5,12 @@ include '../../models/User.php';
 
 session_start();
 
-$current_user = $_SESSION['current_user'];
+if (isset($_SESSION['current_user'])) {
+    $current_user = $_SESSION['current_user'];
+} else {
+    header("HTTP/1.1 401 Unauthorized");
+    exit("Not Authorized");
+}
 
 $line_items = Cart::fetchAll($current_user);
 $totale = 0;
@@ -52,7 +57,8 @@ $totale = 0;
     <?php } ?>
 </div>
 
-<p class="product-item" style="margin-left: 20px; padding-top: 25px; padding-bottom: 25px">Totale carrello: <?php echo $totale; ?>€</p>
+<p class="product-item" style="margin-left: 20px; padding-top: 25px; padding-bottom: 25px">Totale
+    carrello: <?php echo $totale; ?>€</p>
 
 </body>
 

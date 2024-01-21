@@ -1,13 +1,14 @@
 <?php
-
 require '../../connessione/Database.php';
 require '../../models/User.php';
 require '../../models/Product.php';
 
-session_start();
 if (isset($_SESSION['current_user'])) {
     $user = $_SESSION['current_user'];
     $user_id = $user->getId();
+} else {
+    header("HTTP/1.1 401 Unauthorized");
+    exit("Not Authorized");
 }
 ?>
 
