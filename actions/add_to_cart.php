@@ -1,6 +1,6 @@
 <?php
-include '../models/Cart.php';
-include '../models/CartProduct.php';
+require_once '../models/Cart.php';
+require_once '../models/CartProduct.php';
 
 try {
     $cart = Cart::FindByUserId($_POST['user_id']);

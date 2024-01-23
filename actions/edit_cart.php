@@ -1,7 +1,7 @@
 <?php
-include '../models/Cart.php';
-include '../models/CartProduct.php';
-include '../models/User.php';
+require_once '../models/Cart.php';
+require_once '../models/CartProduct.php';
+require_once '../models/User.php';
 
 session_start();
 

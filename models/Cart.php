@@ -1,6 +1,6 @@
 <?php
-include 'Product.php';
-include __DIR__ . '/../connessione/Database.php';
+require_once 'Product.php';
+require_once __DIR__ . '/../connessione/Database.php';
 
 class Cart
 {

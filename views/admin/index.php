@@ -1,7 +1,7 @@
 <?php
-require '../../connessione/Database.php';
-require '../../models/User.php';
-require '../../models/Product.php';
+require_once '../../connessione/Database.php';
+require_once '../../models/User.php';
+require_once '../../models/Product.php';
 
 session_start();
 if (!isset($_SESSION['current_user']) || $_SESSION['current_user']->getRoleId() == 1) {

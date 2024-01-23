@@ -1,8 +1,8 @@
 <?php
-require '../../models/Session.php';
-require '../../models/Product.php';
-require '../../models/User.php';
-require '../../connessione/Database.php';
+require_once '../../models/Session.php';
+require_once '../../models/Product.php';
+require_once '../../models/User.php';
+require_once '../../connessione/Database.php';
 
 
 session_start();

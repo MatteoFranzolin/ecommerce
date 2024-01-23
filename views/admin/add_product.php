@@ -1,5 +1,5 @@
 <?php
-require '../../models/User.php';
+require_once '../../models/User.php';
 
 session_start();
 if (!isset($_SESSION['current_user']) || $_SESSION['current_user']->getRoleId() == 1) {
