@@ -56,3 +56,7 @@ alter table ecommerce.cart_products
 
 alter table ecommerce.sessions
     add foreign key (user_id) references users (id);
+
+
+ALTER TABLE sessions
+    ADD COLUMN active BOOLEAN NOT NULL DEFAULT TRUE;

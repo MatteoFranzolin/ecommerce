@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__.'/../connessione/Database.php';
 class Session
 {
 
@@ -30,7 +30,7 @@ class Session
         if (!$stmt->execute()) {
             return false;
         }
-        return $stmt->fetchObject("User");
+        return $stmt->fetchObject("Session");
     }
 
     public function Delete()
@@ -42,6 +42,14 @@ class Session
         if (!$stmt->execute()) {
             return false;
         }
+    }
+
+    public static function Deactive($session_id)
+    {
+        $pdo = self::connectToDatabase();
+        $stmt = $pdo->prepare("update sessions set active = false where id = :id");
+        $stmt->bindParam(":id", $session_id);
+        return $stmt->execute();
     }
 
     private static function connectToDatabase()

@@ -19,7 +19,7 @@ if (!$user) {
 } else {
     $_SESSION['current_user'] = $user;
     $params = array('ip' => $_SERVER['REMOTE_ADDR'], 'data_login' => date('Y-m-d H:i:s'), 'user_id' => User::Find($params_user)->getId());
-    Session::Create($params);
+    $_SESSION['session_id'] = Session::Create($params)->getId();
     header('Location: ../views/products/index.php');
 }
 exit;
