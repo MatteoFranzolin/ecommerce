@@ -11,8 +11,7 @@ $password_confirmation = hash('sha256', $_POST['password-confirmation']);
 
 //controllo email già esistente
 $user = User::FindByEmail($email);
-if ($user)
-{
+if ($user) {
     header('Location:../views/login.php');
     exit;
 }
@@ -24,11 +23,10 @@ if (strcmp($password, $password_confirmation) != 0) {
 }
 
 $params = array('email' => $email, 'password' => $password);
-try{
+try {
     $user = User::Create($params);
     $cart = Cart::Create($user);
-}
-catch(Exception $e){
+} catch (Exception $e) {
     echo $e->getMessage();
     exit();
 }

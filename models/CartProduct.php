@@ -97,6 +97,7 @@ class CartProduct
         }
         return true;
     }
+
     public function save()
     {
         $quantita = $this->getQuantita();

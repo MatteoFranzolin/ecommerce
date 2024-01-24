@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__.'/../connessione/Database.php';
+require_once __DIR__ . '/../connessione/Database.php';
+
 class Session
 {
 
